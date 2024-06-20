@@ -21,6 +21,9 @@ spec:
           targetRevision: '{{targetRevision}}'
           path: '{{path}}'
           helm:
+            parameters:
+            - name: image.tag
+              value: '{{imageTag}}'
             valueFiles:
               - values.yaml
       destination:

@@ -5,7 +5,8 @@
   "targetRevision": "master",
   "path": "app4",
   "valuesPath": "values.yaml",
-  "namespace": "appset"
+  "namespace": "appset",
+  "imageTag": "1.24.0"
 }
 
 
