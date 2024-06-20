@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    customer: wisetech
+  name: chartofapps-app4
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: chartofapps
+  project: default
+  sources:
+  - path: app4
+    helm:
+      parameters:
+      - name: image.tag
+        value: {{ .Values.app4.image.tag }}
+      valueFiles:
+      - values.yaml
+    repoURL: https://github.com/gopaljayanthi/helm-charts.git
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true

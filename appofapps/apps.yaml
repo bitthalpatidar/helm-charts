@@ -1,0 +1,103 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    customer: wisetech
+  name: appofapps-app1
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: appofapps-app
+  project: default
+  sources:
+  - path: app1
+    helm:
+      parameters:
+      - name: image.tag
+        value: 1.27.0
+      valueFiles:
+      - values.yaml
+    repoURL: https://github.com/gopaljayanthi/helm-charts.git
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    customer: wisetech
+  name: appofapps-app2
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: appofapps-app
+  project: default
+  sources:
+  - path: app2
+    helm:
+      parameters:
+      - name: image.tag
+        value: 1.26.0
+      valueFiles:
+      - values.yaml
+    repoURL: https://github.com/gopaljayanthi/helm-charts.git
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    customer: wisetech
+  name: appofapps-app3
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: appofapps-app
+  project: default
+  sources:
+  - path: app3
+    helm:
+      parameters:
+      - name: image.tag
+        value: 1.25.0
+      valueFiles:
+      - values.yaml
+    repoURL: https://github.com/gopaljayanthi/helm-charts.git
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    customer: wisetech
+  name: appofapps-app4
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: appofapps-app
+  project: default
+  sources:
+  - path: app4
+    helm:
+      parameters:
+      - name: image.tag
+        value: 1.24.0
+      valueFiles:
+      - values.yaml
+    repoURL: https://github.com/gopaljayanthi/helm-charts.git
+    targetRevision: master
+  syncPolicy:
+    syncOptions:
+    - CreateNamespace=true
