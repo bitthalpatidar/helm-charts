@@ -1,0 +1,12 @@
+{
+  "name": "app3",
+  "project": "default",
+  "repoURL": "https://charts.bitnami.com/bitnami",
+  "targetRevision": "17.3.2",
+  "chart": "nginx",
+  "valuesPath": "wisetech/app3/values.yaml",
+  "namespace": "app3",
+  "valuesRevision": "master"
+}
+
+
