@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  labels:
+    customer: wisetech
+  name: wisetech-appofapps
+  namespace: argocd
+spec:
+  destination:
+    name: in-cluster
+    namespace: argocd
+  project: default
+  sources:
+  - path: appofapps
+    repoURL: https://github.com/gopaljayanthi/helm-charts.git
+    targetRevision: master
