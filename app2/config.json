@@ -1,12 +1,11 @@
 {
   "name": "app2",
   "project": "default",
-  "repoURL": "https://charts.bitnami.com/bitnami",
-  "targetRevision": "17.3.2",
-  "chart": "nginx",
-  "valuesPath": "wisetech/app2/values.yaml",
-  "namespace": "app2",
-  "valuesRevision": "master"
+  "repoURL": "https://github.com/gopaljayanthi/helm-charts.git",
+  "targetRevision": "master",
+  "path": "app2",
+  "valuesPath": "values.yaml",
+  "namespace": "appset"
 }
 
 
