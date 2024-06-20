@@ -1,37 +1,37 @@
 # values.yaml for my-main-chart
 
 app1:
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: nginx
-    tag: stable
+    tag: 1.27.0
   service:
     type: NodePort
     port: 30080
 
 app2:
-  replicaCount: 3
+  replicaCount: 1
   image:
-    repository: redis
-    tag: latest
+    repository: nginx
+    tag: 1.26.1
   service:
     type: ClusterIP
     port: 6380
 
 app3:
-  replicaCount: 2
+  replicaCount: 1
   image:
     repository: nginx
-    tag: stable
+    tag: 1.26
   service:
     type: NodePort
     port: 30080
 
 app4:
-  replicaCount: 3
+  replicaCount: 1
   image:
-    repository: redis
-    tag: latest
+    repository: nginx
+    tag: 1.25
   service:
     type: ClusterIP
     port: 6380
