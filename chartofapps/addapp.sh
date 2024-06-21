@@ -28,7 +28,7 @@ if [ $? -eq 0 ]; then
 | yq  eval 'del(.metadata.generation)' \
 | yq  eval 'del(.metadata.resourceVersion)' \
 | yq  eval 'del(.metadata.labels."app.kubernetes.io/instance")' \
-| yq  eval 'del(.metadata.uid)' > testtemplates/"$app".yaml
+| yq  eval 'del(.metadata.uid)' > templates/"$app".yaml
 
  rm -f "$app"-raw.yaml
  echo done creating "$app".yaml
