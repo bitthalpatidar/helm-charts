@@ -3,7 +3,7 @@ Identify the github repo in which the helm charts of the apps are present
 user has commit permissions to this repo
 git, helm, kubectl, bash, yq https://github.com/mikefarah/yq/releases/tag/v4.44.2 installed on user machine
 kubeconfig for access to argocd cluster 
-identify the applications in argocd that need to be clubbed together so they can rolled back together
+identify the applications in argocd that need to be clubbed together so they can be rolled back together
 
 steps to implement chartofapps:
 
@@ -22,24 +22,25 @@ all the application yamls will go in the templates folder as <application-name>.
 6. identify the applications in argocd and create a file with their names, one name per line.
   lets call this file apps.txt in the folder <git-repo-root-folder>/chartofapps
 7. make sure the kubeconfig is set to the cluster on which argocd is installed and copy this script whose source is at
-https://raw.githubusercontent.com/gopaljayanthi/helm-charts/master/chartofapps/addapps.sh and run the follwong command
+https://raw.githubusercontent.com/gopaljayanthi/helm-charts/master/chartofapps/addapps.sh and run the following command
 
 addapps.sh apps.txt
 
 8. look at files in templates folder created, change spec.sources[0].helm.parameter name and values strings
   the name should come from the parent app helm chart example (image.tag), the value should be from values.yaml example {{ .Values.<application-name>.image.tag }}
-9. edit values.yaml to contain the values for each app example https://raw.githubusercontent.com/gopaljayanthi/helm-charts/master/chartofapps/values.yaml
+9. edit values.yaml to contain the values for each app.
+ example: https://raw.githubusercontent.com/gopaljayanthi/helm-charts/master/chartofapps/values.yaml
 
-10. git add, commit and push the changes and test
+10. rm apps.txt, rm badapps.txt and then git add, commit and push the changes
 
 11. repeat steps 6 through 10 to add more applications
 12. to remove applications delete the corresponding yaml files from templates folder
 
 Testing:
-to test create an app in argocd using example
+to test, create an app in argocd using example
 https://raw.githubusercontent.com/gopaljayanthi/helm-charts/master/chartofapps.yaml
-
-and synchronize the app and see of the desired apllications are created
+and synchronize the app and see if the desired applications are created
+and for each application the required kubernetes resources are created
 
 
 
