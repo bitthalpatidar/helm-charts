@@ -4,5 +4,5 @@ helm:
     value: docker.io/gopalvithaljayanthi/nginx
     forcestring: true
   - name: image.tag
-    value: mybranch-1270
+    value: mybranch-1273
     forcestring: true
