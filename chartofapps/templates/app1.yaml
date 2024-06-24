@@ -16,7 +16,7 @@ spec:
     namespace: chartofapps
   project: default
   source:
-  - path: app1
+    path: app1
     helm:
       #parameters:
       #- name: image.tag
