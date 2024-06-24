@@ -1,6 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
+  annotations:
+    argocd-image-updater.argoproj.io/git-branch: master
+    argocd-image-updater.argoproj.io/image-list: docker.io/gopalvithaljayanthi/nginx:~mybranch
+    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
+    pullsecret: argocd:dockerhub-secret
   labels:
     customer: wisetech
   name: chartofapps-app1
@@ -13,9 +18,9 @@ spec:
   sources:
   - path: app1
     helm:
-      parameters:
-      - name: image.tag
-        value: {{ .Values.app1.image.tag }}
+      #parameters:
+      #- name: image.tag
+      #  value: {{ .Values.app1.image.tag }}
       valueFiles:
       - values.yaml
     repoURL: https://github.com/gopaljayanthi/helm-charts.git
