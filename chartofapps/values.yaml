@@ -1,12 +1,16 @@
 app1:
   image:
     tag: 1.27.0
+    repository: docker.io/gopalvithaljayanthi/nginx
 app2:
   image:
     tag: 1.26.0
+    repository: docker.io/gopalvithaljayanthi/nginx
 app3:
    image:
-     tag: 1.26.0
+    tag: 1.26.0
+    repository: docker.io/gopalvithaljayanthi/nginx
 app4:
   image:
-     tag: 1.26.0
+    tag: 1.26.0
+    repository: docker.io/gopalvithaljayanthi/nginx
