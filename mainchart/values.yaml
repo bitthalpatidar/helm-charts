@@ -1,7 +1,7 @@
 branch: mybranch
 app1:
   image:
-    tag: mybranch-1276
+    tag: mybranch-1275
     repository: docker.io/gopalvithaljayanthi/nginx
 app2:
   image:
@@ -9,9 +9,9 @@ app2:
     repository: docker.io/gopalvithaljayanthi/nginx
 app3:
    image:
-    tag: mybranch-1276
+    tag: mybranch-1277
     repository: docker.io/gopalvithaljayanthi/nginx
 app4:
   image:
-    tag: mybranch-1276
+    tag: mybranch-1278
     repository: docker.io/gopalvithaljayanthi/nginx
