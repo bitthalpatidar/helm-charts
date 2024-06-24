@@ -6,22 +6,22 @@ metadata:
     argocd-image-updater.argoproj.io/git-branch: master
 
     argocd-image-updater.argoproj.io/image-list: app1=docker.io/gopalvithaljayanthi/nginx,app2=docker.io/gopalvithaljayanthi/nginx,app3=docker.io/gopalvithaljayanthi/nginx,app4=docker.io/gopalvithaljayanthi/nginx
-    argocd-image-updater.argoproj.io/app1.allow-tags: regexp:^{{ .Values.branch }}
+    argocd-image-updater.argoproj.io/app1.allow-tags: regexp:^mybranch
     argocd-image-updater.argoproj.io/app1.update-strategy: latest
     argocd-image-updater.argoproj.io/app1.helm.image-name: app1.image.name
     argocd-image-updater.argoproj.io/app1.helm.image-tag: app1.image.tag
 
-    argocd-image-updater.argoproj.io/app2.allow-tags: regexp:^{{ .Values.branch }}
+    argocd-image-updater.argoproj.io/app2.allow-tags: regexp:^mybranch
     argocd-image-updater.argoproj.io/app2.update-strategy: latest
     argocd-image-updater.argoproj.io/app2.helm.image-name: app2.image.name
     argocd-image-updater.argoproj.io/app2.helm.image-tag: app2.image.tag
 
-    argocd-image-updater.argoproj.io/app3.allow-tags: regexp:^{{ .Values.branch }}
+    argocd-image-updater.argoproj.io/app3.allow-tags: regexp:^mybranch
     argocd-image-updater.argoproj.io/app3.update-strategy: latest
     argocd-image-updater.argoproj.io/app3.helm.image-name: app3.image.name
     argocd-image-updater.argoproj.io/app3.helm.image-tag: app3.image.tag
 
-    argocd-image-updater.argoproj.io/app4.allow-tags: regexp:^{{ .Values.branch }}
+    argocd-image-updater.argoproj.io/app4.allow-tags: regexp:^mybranch
     argocd-image-updater.argoproj.io/app4.update-strategy: latest
     argocd-image-updater.argoproj.io/app4.helm.image-name: app4.image.name
     argocd-image-updater.argoproj.io/app4.helm.image-tag: app4.image.tag
@@ -38,18 +38,6 @@ spec:
   source:
     path: chartofapps
     helm:
-      parameters:
-      - name: app1.image.tag
-        value: {{ .Values.app1.image.tag }}
-      parameters:
-      - name: app2.image.tag
-        value: {{ .Values.app2.image.tag }}
-      parameters:
-      - name: app3.image.tag
-        value: {{ .Values.app3.image.tag }}
-      parameters:
-      - name: app4.image.tag
-        value: {{ .Values.app4.image.tag }}
       valueFiles:
       - values.yaml
     repoURL: https://github.com/gopaljayanthi/helm-charts.git
