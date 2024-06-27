@@ -1,7 +1,9 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: trigger-github-action
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+  generateName: trigger-github-action-
 spec:
   template:
     spec:
