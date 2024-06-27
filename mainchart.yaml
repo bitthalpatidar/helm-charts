@@ -37,5 +37,6 @@ spec:
     repoURL: https://github.com/gopaljayanthi/helm-charts.git
     targetRevision: HEAD
   syncPolicy:
+    automated: {}
     syncOptions:
     - CreateNamespace=true
