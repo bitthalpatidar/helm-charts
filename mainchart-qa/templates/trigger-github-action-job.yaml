@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: trigger-github-action
+spec:
+  template:
+    spec:
+      containers:
+      - name: trigger-github-action
+        image: curlimages/curl:latest
+        command: ["/bin/sh", "-c"]
+        env:
+        - name: GITHUB_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: github-token
+              key: token
+        - name: OWNER
+          value: gopaljayanthi
+        - name: REPO
+          value: helm-charts
+        args:
+          - |
+            curl -X POST \
+            -H "Accept: application/vnd.github.everest-preview+json" \
+            -H "Authorization: token ${GITHUB_TOKEN}" \
+            https://api.github.com/repos/${OWNER}/${REPO}/dispatches \
+            -d '{"event_type":"custom-event"}';
+      restartPolicy: Never
+  backoffLimit: 4

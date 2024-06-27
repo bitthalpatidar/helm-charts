@@ -10,6 +10,18 @@ jobs:
     steps:
     - name: Check out repository
       uses: actions/checkout@v2
-
+    - name: Set up Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+    - name: Get current timestamp
+      id: timestamp
+      run: echo "TIMESTAMP=$(date +'%Y%m%d%H%M')" >> $GITHUB_EN
+    - name: Create new branch with timestamp
+      run: |
+        git fetch origin master
+        git checkout master
+        git checkout -b mainchart-qa-${{ env.TIMESTAMP }}
+        git push origin mainchart-qa-${{ env.TIMESTAMP }}
     - name: Run a script
       run: bash echo.sh
