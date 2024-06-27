@@ -1,14 +1,15 @@
-name: Create ConfigMaps
+name: Webhook Trigger
 
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types: [custom-event]
 
 jobs:
-  build:
+  run:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Run script 
-        run: bash echo.sh
+    - name: Check out repository
+      uses: actions/checkout@v2
+
+    - name: Run a script
+      run: bash echo.sh
