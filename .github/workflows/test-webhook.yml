@@ -17,11 +17,14 @@ jobs:
     - name: Get current timestamp
       id: timestamp
       run: echo "TIMESTAMP=$(date +'%Y%m%d%H%M')" >> $GITHUB_ENV
+    - name: Get commit ID
+      id: commit
+      run: echo "COMMIT_ID=${GITHUB_SHA::7}" >> $GITHUB_ENV
     - name: Create new branch with timestamp
       run: |
         git fetch origin master
         git checkout master
-        git checkout -b mainchart-qa-${{ env.TIMESTAMP }}
-        git push origin mainchart-qa-${{ env.TIMESTAMP }}
+        git checkout -b mainchart-qa--${{ env.COMMIT_ID }}-${{ env.TIMESTAMP }}
+        git push origin mainchart-qa--${{ env.COMMIT_ID }}-${{ env.TIMESTAMP }}
     - name: Run a script
       run: bash echo.sh
