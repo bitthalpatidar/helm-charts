@@ -1,17 +1,5 @@
 helm:
   parameters:
-  - name: app1.image.name
-    value: docker.io/gopalvithaljayanthi/nginx
-    forcestring: true
-  - name: app1.image.tag
-    value: mybranch-1285
-    forcestring: true
-  - name: app2.image.name
-    value: docker.io/gopalvithaljayanthi/nginx
-    forcestring: true
-  - name: app2.image.tag
-    value: mybranch-1285
-    forcestring: true
   - name: app3.image.name
     value: docker.io/gopalvithaljayanthi/nginx
     forcestring: true
