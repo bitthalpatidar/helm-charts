@@ -1,0 +1,44 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: mainchart-project
+  namespace: argocd
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - name: '*'
+    namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
+  syncWindows:
+  - applications:
+    - '*-qa'
+    duration: 1h
+    kind: allow
+    schedule: '* 11 * * *'
+    timeZone: UTC
+    manualSync: {{ .Values.qaManualSync }}
+  - applications:
+    - '*-uat'
+    duration: 1h
+    kind: allow
+    schedule: '* 12 * * *'
+    timeZone: UTC
+    manualSync: {{ .Values.uatManualSync }}
+  - applications:
+    - '*-perf'
+    duration: 1h
+    kind: allow
+    schedule: '* 12 * * *'
+    timeZone: UTC
+    manualSync: {{ .Values.perfManualSync }}
+  - applications:
+    - '*-prod'
+    duration: 1h
+    kind: allow
+    schedule: '* 12 * * *'
+    timeZone: UTC
+    manualSync: {{ .Values.prodManualSync }}

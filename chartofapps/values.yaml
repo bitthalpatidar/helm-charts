@@ -1,17 +1,6 @@
-branch: mybranch
-app1:
-  image:
-    tag: mybranch-1276
-    repository: docker.io/gopalvithaljayanthi/nginx
-app2:
-  image:
-    tag: mybranch-1276
-    repository: docker.io/gopalvithaljayanthi/nginx
-app3:
-   image:
-    tag: mybranch-1276
-    repository: docker.io/gopalvithaljayanthi/nginx
-app4:
-  image:
-    tag: mybranch-1276
-    repository: docker.io/gopalvithaljayanthi/nginx
+branch: "mybranch"
+githubTag: "mytag"
+qaManualSync: true
+perfManualSync: "true"
+uatManualSync: "false"
+prodManualSync: "false"
