@@ -24,7 +24,7 @@ jobs:
       run: |
         git fetch origin master
         git checkout master
-        git checkout -b mainchart-qa--${{ env.COMMIT_ID }}-${{ env.TIMESTAMP }}
-        git push origin mainchart-qa--${{ env.COMMIT_ID }}-${{ env.TIMESTAMP }}
+        git checkout -b mainchart-qa-${{ env.COMMIT_ID }}-${{ env.TIMESTAMP }}
+        git push origin mainchart-qa-${{ env.COMMIT_ID }}-${{ env.TIMESTAMP }}
     - name: Run a script
       run: bash echo.sh
