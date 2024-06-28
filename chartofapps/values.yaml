@@ -2,5 +2,5 @@ branch: "mybranch"
 githubTag: "mytag"
 qaManualSync: true
 perfManualSync: "true"
-uatManualSync: "false"
-prodManualSync: "false"
+uatManualSync: "true"
+prodManualSync: "true"

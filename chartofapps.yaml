@@ -1,31 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  annotations:
-    argocd-image-updater.argoproj.io/write-back-method: git:secret:argocd/git-creds
-    argocd-image-updater.argoproj.io/git-branch: master
-
-    argocd-image-updater.argoproj.io/image-list: app1=docker.io/gopalvithaljayanthi/nginx,app2=docker.io/gopalvithaljayanthi/nginx,app3=docker.io/gopalvithaljayanthi/nginx,app4=docker.io/gopalvithaljayanthi/nginx
-    argocd-image-updater.argoproj.io/app1.allow-tags: regexp:^mybranch
-    argocd-image-updater.argoproj.io/app1.update-strategy: latest
-    argocd-image-updater.argoproj.io/app1.helm.image-name: app1.image.name
-    argocd-image-updater.argoproj.io/app1.helm.image-tag: app1.image.tag
-
-    argocd-image-updater.argoproj.io/app2.allow-tags: regexp:^mybranch
-    argocd-image-updater.argoproj.io/app2.update-strategy: latest
-    argocd-image-updater.argoproj.io/app2.helm.image-name: app2.image.name
-    argocd-image-updater.argoproj.io/app2.helm.image-tag: app2.image.tag
-
-    argocd-image-updater.argoproj.io/app3.allow-tags: regexp:^mybranch
-    argocd-image-updater.argoproj.io/app3.update-strategy: latest
-    argocd-image-updater.argoproj.io/app3.helm.image-name: app3.image.name
-    argocd-image-updater.argoproj.io/app3.helm.image-tag: app3.image.tag
-
-    argocd-image-updater.argoproj.io/app4.allow-tags: regexp:^mybranch
-    argocd-image-updater.argoproj.io/app4.update-strategy: latest
-    argocd-image-updater.argoproj.io/app4.helm.image-name: app4.image.name
-    argocd-image-updater.argoproj.io/app4.helm.image-tag: app4.image.tag
-
   labels:
     customer: wisetech
   name: chartofapps
