@@ -18,4 +18,5 @@ spec:
     repoURL: https://github.com/gopaljayanthi/helm-charts.git
     targetRevision: master
   syncPolicy:
-    automated: {}
+    automated:
+      prune: true
