@@ -9,6 +9,7 @@ data:
   continent: Asia
   planet: earth
   star: sun
+  galaxy: milkyWay
 kind: ConfigMap
 metadata:
   annotations:
