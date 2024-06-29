@@ -11,7 +11,10 @@ jobs:
       run: echo "::set-output name=app_name::${{ github.event.client_payload['argocd-application-name'] }}"
     - name: Set Application Sync Status
       id: set_app_sync_status
-      run: echo "::set-output name=app_sync_status::${{ github.event.client_payload['argocd-application-sync-status'] }}"  
+      run: echo "::set-output name=app_sync_status::${{ github.event.client_payload['argocd-application-sync-status'] }}"
+    - name: Set Application health Status
+      id: set_app_health_status
+      run: echo "::set-output name=app_health_status::${{ github.event.client_payload['argocd-application-health'] }}"      
     - name: echo application info
       run: |
-        echo the application that triggered this was ${{ steps.set_app_name.outputs.app_name }} and its sync status is ${{ steps.set_app_sync_status.outputs.app_sync_status }} 
+        echo the application that triggered this was ${{ steps.set_app_name.outputs.app_name }} and its sync status is ${{ steps.set_app_sync_status.outputs.app_sync_status }} and its health status is ${{ steps.set_app_health_status.outputs.app_health_status }} 
