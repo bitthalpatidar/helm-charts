@@ -4,23 +4,23 @@ helm:
     value: docker.io/gopalvithaljayanthi/nginx
     forcestring: true
   - name: app1.image.tag
-    value: mybranch-1286
+    value: mybranch-1280
     forcestring: true
   - name: app2.image.name
     value: docker.io/gopalvithaljayanthi/nginx
     forcestring: true
   - name: app2.image.tag
-    value: mybranch-1286
+    value: mybranch-1281
     forcestring: true
   - name: app3.image.name
     value: docker.io/gopalvithaljayanthi/nginx
     forcestring: true
   - name: app3.image.tag
-    value: mybranch-1286
+    value: mybranch-1282
     forcestring: true
   - name: app4.image.name
     value: docker.io/gopalvithaljayanthi/nginx
     forcestring: true
   - name: app4.image.tag
-    value: mybranch-1286
+    value: mybranch-1283
     forcestring: true
