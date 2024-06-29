@@ -25,6 +25,12 @@ metadata:
     argocd-image-updater.argoproj.io/app4.update-strategy: latest
     argocd-image-updater.argoproj.io/app4.helm.image-name: app4.image.name
     argocd-image-updater.argoproj.io/app4.helm.image-tag: app4.image.tag
+
+    argocd-image-updater.argoproj.io/app1.ignore-tags: "*"
+    argocd-image-updater.argoproj.io/app2.ignore-tags: "*"
+    argocd-image-updater.argoproj.io/app3.ignore-tags: "*"
+    argocd-image-updater.argoproj.io/app4.ignore-tags: "*"
+
   name: mainchart-perf
   namespace: argocd
 spec:
