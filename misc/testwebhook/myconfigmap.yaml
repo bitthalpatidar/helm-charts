@@ -4,6 +4,7 @@ data:
   department: devops
   company: opsmx
   city: hyderabad
+  state: Telangana
 kind: ConfigMap
 metadata:
   name: myconfigmap
