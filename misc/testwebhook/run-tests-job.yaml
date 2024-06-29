@@ -3,7 +3,7 @@ kind: Job
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "5"
-  name: run-tests-
+  name: run-tests
 spec:
   template:
     spec:
