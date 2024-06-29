@@ -9,6 +9,9 @@ jobs:
     - name: Set Application Name
       id: set_app_name
       run: echo "::set-output name=app_name::${{ github.event.client_payload['argocd-application-name'] }}"
-    - name: echo application name
+    - name: Set Application Sync Status
+      id: set_app_sync_status
+      run: echo "::set-output name=app_sync_status::${{ github.event.client_payload['argocd-application-sync-status'] }}"  
+    - name: echo application info
       run: |
-        echo the application that triggered this was ${{ steps.set_app_name.outputs.app_name }}
+        echo the application that triggered this was ${{ steps.set_app_name.outputs.app_name }} and its sync status is ${{ steps.set_app_sync_status.outputs.app_sync_status }} 
