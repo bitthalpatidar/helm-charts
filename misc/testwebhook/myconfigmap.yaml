@@ -8,6 +8,9 @@ data:
   country: India
   continent: Asia
   planet: earth
+  star: sun
 kind: ConfigMap
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "4"
   name: myconfigmap
