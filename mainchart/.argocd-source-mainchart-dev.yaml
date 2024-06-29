@@ -4,7 +4,7 @@ helm:
     value: docker.io/gopalvithaljayanthi/nginx
     forcestring: true
   - name: app1.image.tag
-    value: mybranch-1285
+    value: mybranch-1284
     forcestring: true
   - name: app2.image.name
     value: docker.io/gopalvithaljayanthi/nginx
