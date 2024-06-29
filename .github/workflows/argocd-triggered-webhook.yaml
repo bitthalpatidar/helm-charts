@@ -12,7 +12,3 @@ jobs:
     - name: Create new branch with timestamp
       run: |
         echo the application that triggered this was ${{ steps.set_app_name.outputs.app_name }}
-        git fetch origin master
-        git checkout master
-        git checkout -b ${{ steps.set_app_name.outputs.app_name }}-${{ env.COMMIT_ID }}-${{ env.TIMESTAMP }}
-        git push origin ${{ steps.set_app_name.outputs.app_name }}-${{ env.COMMIT_ID }}-${{ env.TIMESTAMP }}
