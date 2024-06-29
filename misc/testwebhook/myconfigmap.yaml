@@ -1,6 +1,7 @@
 apiVersion: v1
 data:
   name: gopal
+  department: devops
 kind: ConfigMap
 metadata:
   name: myconfigmap
