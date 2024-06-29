@@ -9,6 +9,6 @@ jobs:
     - name: Set Application Name
       id: set_app_name
       run: echo "::set-output name=app_name::${{ github.event.client_payload['argocd-application-name'] }}"
-    - name: Create new branch with timestamp
+    - name: echo application name
       run: |
         echo the application that triggered this was ${{ steps.set_app_name.outputs.app_name }}
