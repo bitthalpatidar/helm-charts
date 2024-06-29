@@ -6,7 +6,8 @@ data:
   city: hyderabad
   state: Telangana
   country: India
-  ccontinent: Asia
+  continent: Asia
+  planet: earth
 kind: ConfigMap
 metadata:
   name: myconfigmap
