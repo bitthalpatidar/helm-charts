@@ -31,11 +31,11 @@ metadata:
     argocd-image-updater.argoproj.io/app3.ignore-tags: "*"
     argocd-image-updater.argoproj.io/app4.ignore-tags: "*"
 
-  name: mainchart
+  name: mainchart-qa
   namespace: argocd
 spec:
   destination:
-    namespace: mainchart
+    namespace: mainchart-qa
     server: https://kubernetes.default.svc
   project: mainchart-project
   source:
