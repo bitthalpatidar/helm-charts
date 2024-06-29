@@ -25,6 +25,9 @@ metadata:
     argocd-image-updater.argoproj.io/app4.update-strategy: latest
     argocd-image-updater.argoproj.io/app4.helm.image-name: app4.image.name
     argocd-image-updater.argoproj.io/app4.helm.image-tag: app4.image.tag
+
+    notifications.argoproj.io/subscribe.on-deployed.github: maonchart-qa-on-deployed
+
   name: mainchart-dev
   namespace: argocd
 spec:
