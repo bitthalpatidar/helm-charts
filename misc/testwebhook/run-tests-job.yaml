@@ -13,6 +13,7 @@ spec:
         command: ["/bin/sh", "-c"]
         args:
           - sleep 10
+          - echo i have been run
           - exit 0
       restartPolicy: Never
-  backoffLimit: 4
+  backoffLimit: 1

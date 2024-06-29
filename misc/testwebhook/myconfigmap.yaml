@@ -5,6 +5,7 @@ data:
   company: opsmx
   city: hyderabad
   state: Telangana
+  country: India
 kind: ConfigMap
 metadata:
   name: myconfigmap
