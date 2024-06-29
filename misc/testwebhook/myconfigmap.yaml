@@ -3,6 +3,7 @@ data:
   name: gopal
   department: devops
   company: opsmx
+  city: hyderabad
 kind: ConfigMap
 metadata:
   name: myconfigmap
