@@ -17,3 +17,5 @@ spec:
       - values.yaml
     repoURL: https://github.com/gopaljayanthi/helm-charts.git
     targetRevision: master
+  syncPolicy:
+    automated: {}

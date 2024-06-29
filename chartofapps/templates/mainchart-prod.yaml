@@ -33,7 +33,7 @@ spec:
     server: https://kubernetes.default.svc
   project: mainchart-project
   source:
-    path: mainchart-qa
+    path: mainchart
     repoURL: https://github.com/gopaljayanthi/helm-charts.git
     targetRevision: HEAD
   syncPolicy:
