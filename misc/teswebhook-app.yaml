@@ -7,7 +7,7 @@ kind: Application
 metadata:
   annotations:
     notifications.argoproj.io/subscribe.on-deployed.github: testwebhook-on-deployed
-    notifications.argoproj.io/subscribe.on-health-degraded.github: testwebhook-on-health-degraded
+    #notifications.argoproj.io/subscribe.on-health-degraded.github: testwebhook-on-health-degraded
   name: testwebhook-take4
   namespace: argocd
 spec:
