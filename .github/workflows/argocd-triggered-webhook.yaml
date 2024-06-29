@@ -3,6 +3,7 @@ on:
   repository_dispatch:
     types: [argocd-event]
 jobs:
+  run:
     runs-on: ubuntu-latest
     steps:
     - name: Set Application Name
