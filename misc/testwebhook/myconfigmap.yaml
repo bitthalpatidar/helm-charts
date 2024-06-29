@@ -10,6 +10,7 @@ data:
   planet: earth
   star: sun
   galaxy: milkyWay
+  nebula: cluster
 kind: ConfigMap
 metadata:
   annotations:
