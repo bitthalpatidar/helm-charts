@@ -1,4 +1,4 @@
-name: argocd-triggered-webhook
+name: argocd triggered webhook
 on:
   repository_dispatch:
     types: [argocd-event]
