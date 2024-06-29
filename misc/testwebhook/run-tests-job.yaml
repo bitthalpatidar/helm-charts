@@ -1,0 +1,18 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    argocd.argoproj.io/hook: PostSync
+  generateName: run-tests-
+spec:
+  template:
+    spec:
+      containers:
+      - name: run-tests
+        image: curlimages/curl:latest
+        command: ["/bin/sh", "-c"]
+        args:
+          - sleep 10
+          - exit 0
+      restartPolicy: Never
+  backoffLimit: 4
