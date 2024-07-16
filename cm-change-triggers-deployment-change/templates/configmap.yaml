@@ -4,4 +4,4 @@ metadata:
   name: my-config
 data:
   config.yaml: |
-    key: value
+    key: value2
