@@ -18,7 +18,8 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: my-image:latest
+          command: ["sleep","30d"]
+          image: busybox:latest
           volumeMounts:
             - name: config-volume
               mountPath: /etc/config
