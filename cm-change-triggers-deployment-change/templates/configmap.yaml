@@ -5,3 +5,7 @@ metadata:
 data:
   config.yaml: |
     key: value2
+    thisdkey: thisdvalue
+    fourth: four
+    fifth: five
+    sixth: six
