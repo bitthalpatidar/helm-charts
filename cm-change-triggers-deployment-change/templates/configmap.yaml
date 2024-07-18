@@ -5,3 +5,4 @@ metadata:
 data:
   config.yaml: |
     key: value2
+    new: value3
